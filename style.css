@@ -1,0 +1,467 @@
+/* ===== Google Font ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f4f7fb;
+    color:#111827;
+    overflow-x:hidden;
+}
+
+/* ===== HERO HEADER ===== */
+header{
+    min-height:80vh;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(37,99,235,.25), transparent 25%),
+        radial-gradient(circle at 85% 30%, rgba(56,189,248,.18), transparent 25%),
+        linear-gradient(135deg,#020617 0%,#071b52 45%,#022c7a 100%);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:60px 20px 40px;
+    color:#fff;
+    position:relative;
+}
+
+header::after{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to bottom, transparent 70%, rgba(255,255,255,.06));
+    pointer-events:none;
+}
+
+header h1{
+    font-size:3.5rem;
+    font-weight:800;
+    margin-bottom:10px;
+    letter-spacing:-1px;
+}
+
+header h1 span{
+    color:#3b82f6;
+}
+
+header p{
+    font-size:1.15rem;
+    color:#dbeafe;
+    max-width:760px;
+    line-height:1.8;
+}
+
+/* ===== PROFILE IMAGE ===== */
+.profile{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid white;
+    margin-bottom:20px;
+    box-shadow:0 0 30px rgba(37,99,235,.6);
+}
+
+.hero-buttons{
+    margin-top:30px;
+}
+
+.hero-buttons .btn{
+    display:inline-block;
+    margin:10px;
+    padding:14px 30px;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.hero-buttons .btn:hover{
+    background:#1d4ed8;
+    transform:translateY(-3px);
+}
+
+/* ===== RESUME BUTTONS ===== */
+.hero-buttons{
+    display:flex;
+    gap:16px;
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-top:28px;
+}
+
+.hero-buttons a{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:14px 24px;
+    border-radius:14px;
+    text-decoration:none;
+    font-weight:600;
+    transition:all .3s ease;
+}
+
+.hero-buttons .primary{
+    background:#2563eb;
+    color:#fff;
+    box-shadow:0 10px 25px rgba(37,99,235,.35);
+}
+
+.hero-buttons .primary:hover{
+    transform:translateY(-2px);
+    background:#1d4ed8;
+}
+
+.hero-buttons .secondary{
+    border:2px solid rgba(255,255,255,.35);
+    color:#fff;
+    background:rgba(255,255,255,.06);
+    backdrop-filter:blur(10px);
+}
+
+.hero-buttons .secondary:hover{
+    background:#ffffff;
+    color:#0f172a;
+}
+
+/* ===== NAVIGATION ===== */
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(2,6,23,.92);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:32px;
+    padding:16px 20px;
+}
+
+nav a{
+    color:#e5eefc;
+    text-decoration:none;
+    font-weight:600;
+    position:relative;
+    transition:color .3s ease;
+}
+
+nav a::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:0;
+    height:3px;
+    border-radius:999px;
+    background:#3b82f6;
+    transition:width .3s ease;
+}
+
+nav a:hover{
+    color:#ffffff;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+/* ===== SECTIONS ===== */
+section{
+    width:min(1180px,92%);
+    margin:0 auto;
+    padding:70px 0;
+}
+
+section h2{
+    font-size:2rem;
+    font-weight:700;
+    color:#0f172a;
+    margin-bottom:34px;
+    position:relative;
+    display:inline-block;
+}
+
+section h2::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-10px;
+    width:64px;
+    height:4px;
+    border-radius:999px;
+    background:#2563eb;
+}
+
+/* ===== ABOUT ===== */
+#about p{
+    max-width:900px;
+    line-height:1.9;
+    color:#475569;
+    font-size:1.05rem;
+}
+
+/* ===== CARD BASE ===== */
+.card,
+.education-card{
+    background:rgba(255,255,255,.82);
+    border:1px solid rgba(37,99,235,.12);
+    backdrop-filter:blur(10px);
+    border-radius:24px;
+    padding:26px;
+    box-shadow:0 10px 30px rgba(15,23,42,.08);
+    transition:transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+}
+
+.card:hover,
+.education-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 40px rgba(37,99,235,.16);
+    border-color:rgba(37,99,235,.28);
+}
+
+.card h3,
+.education-card h3{
+    color:#0f172a;
+    margin-bottom:14px;
+    font-size:1.15rem;
+    font-weight:700;
+}
+
+.card p,
+.education-card p{
+    color:#475569;
+    line-height:1.8;
+}
+
+/* ===== SKILLS GRID ===== */
+#skills{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:24px;
+}
+
+/* Progress-bar feel inside skill cards */
+#skills .card p{
+    position:relative;
+    padding-top:18px;
+}
+
+#skills .card p::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:8px;
+    border-radius:999px;
+    background:#e2e8f0;
+}
+
+#skills .card p::after{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:82%;
+    height:8px;
+    border-radius:999px;
+    background:linear-gradient(90deg,#2563eb,#38bdf8);
+}
+
+/* ===== PROJECTS ===== */
+#projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+    gap:26px;
+}
+
+#projects .card{
+    position:relative;
+    overflow:hidden;
+}
+
+#projects .card::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:6px;
+    background:linear-gradient(90deg,#2563eb,#38bdf8);
+}
+
+#projects .card h3{
+    margin-top:6px;
+}
+
+/* ===== EDUCATION ===== */
+.education-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:24px;
+}
+
+.education-card{
+    position:relative;
+}
+
+.education-card::before{
+    content:'';
+    position:absolute;
+    left:18px;
+    top:22px;
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background:#2563eb;
+    box-shadow:0 0 0 6px rgba(37,99,235,.15);
+}
+
+.education-card{
+    padding-left:52px;
+}
+
+.education-card strong{
+    color:#0f172a;
+}
+
+/* ===== CONTACT ===== */
+#contact{
+    text-align:center;
+}
+
+#contact p{
+    margin:12px 0;
+    color:#475569;
+    font-size:1.05rem;
+}
+
+#contact a{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-width:170px;    
+    margin:12px 10px;
+    padding:14px 22px;
+    border-radius:14px;
+    text-decoration:none;
+    font-weight:600;
+    background:#ffffff;
+    color:#0f172a;
+    border:1px solid rgba(15,23,42,.08);
+    box-shadow:0 8px 20px rgba(15,23,42,.06);
+    transition:all .3s ease;
+}
+
+#contact a:hover{
+    transform:translateY(-3px);
+    background:#2563eb;
+    color:#ffffff;
+    border-color:#2563eb;
+    box-shadow:0 14px 28px rgba(37,99,235,.28);
+}
+
+/* ===== FOOTER ===== */
+footer{
+    background:#020617;
+    color:#cbd5e1;
+    text-align:center;
+    padding:24px 16px;
+    margin-top:20px;
+    border-top:1px solid rgba(255,255,255,.06);
+}
+
+/* ===== REVEAL ANIMATION ===== */
+.card,
+.education-card{
+    animation:fadeUp .7s ease both;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(22px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#e2e8f0;
+}
+
+::-webkit-scrollbar-thumb{
+    background:linear-gradient(#2563eb,#38bdf8);
+    border-radius:999px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width:900px){
+    header{
+        min-height:auto;
+        padding-top:48px;
+    }
+
+    header h1{
+        font-size:2.7rem;
+    }
+
+    .profile{
+        width:190px;
+        height:190px;
+    }
+
+    nav{
+        gap:18px;
+    }
+}
+
+@media (max-width:600px){
+    header h1{
+        font-size:2.2rem;
+    }
+
+    header p{
+        font-size:1rem;
+    }
+
+    .profile{
+        width:160px;
+        height:160px;
+    }
+
+    section{
+        padding:56px 0;
+    }
+
+    #projects{
+        grid-template-columns:1fr;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        width:100%;
+    }
+
+    .hero-buttons a{
+        width:100%;
+        justify-content:center;
+    }
+}
